@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hio_dev | UI Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">HIO_DEV</div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#projects">Portfólio</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <section id="home" class="hero reveal">
+    <div class="container">
+        <div class="hero-content">
+            
+            <div class="status-container">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">AVAILABLE FOR WORK</span>
+                </div>
+            </div>
+
+            <h1>Interface Design focado em <span class="gradient-text">Roblox</span> e <span class="gradient-text">Web</span>.</h1>
+            <p>Criação de layouts para jogos e interfaces básicas para sites, tudo desenvolvido no Figma.</p>
+            
+            <a href="#projects" class="btn primary">Ver Portfólio</a>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="reveal">Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <img src="hiovoice-preview.png" alt="Hiovoice UI">
+                    <h3>Hiovoice - Roblox</h3>
+                    <p>Desenvolvimento da interface completa para um jogo de voz.</p>
+                </div>
+
+                <div class="project-card reveal">
+                    <img src="modcall.png" alt="Roblox UI">
+                    <h3>UI de mod call - Roblox</h3>
+                    <p>UI de mod call para um jogo de voz.</p>
+                </div>
+
+                <div class="project-card reveal">
+                    <img src="casos.png" alt="Web UI">
+                    <h3>UI de casos Básica</h3>
+                    <p>UI de casos para site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section reveal">
+        <div class="container">
+            <div class="about-content">
+                <h2>Sobre</h2>
+                <p>Atuação focada na parte visual de interfaces digitais. O trabalho concentra-se hoje na criação de layouts imersivos para Roblox e interfaces funcionais para a web.</p>
+                <p>Utiliza o Figma como ferramenta principal para dar vida a projetos de UI. O processo exige referências visuais para garantir a entrega de um design alinhado às expectativas.</p>
+                <div class="stack">
+                    <strong>Foco:</strong> 
+                    <span>Figma</span>
+                    <span>Roblox UI</span>
+                    <span>Basic Web UI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<section class="process-section reveal">
+    <div class="container">
+        <div class="status-container">
+            <div class="status-badge-process">
+                <span class="status-text-mini">PROCESS & TOOLS</span>
+            </div>
+        </div>
+        
+        <h2 class="magic-title">O Processo <span class="italic-gradient">Criativo</span></h2>
+        
+        <div class="process-grid">
+            <div class="process-card">
+                <span class="card-number">01</span>
+                <h3>Referências</h3>
+                <p>Busca e análise de referências visuais para fundamentar o design.</p>
+            </div>
+            <div class="process-card">
+                <span class="card-number">02</span>
+                <h3>Design UI</h3>
+                <p>Criação da interface de alta fidelidade no Figma focada em estética.</p>
+            </div>
+            <div class="process-card">
+                <span class="card-number">03</span>
+                <h3>Entrega</h3>
+                <p>Exportação de assets e layouts prontos para implementação.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="toolbox-section reveal">
+    <div class="toolbox-glow"></div> <div class="container">
+        <h2 class="toolbox-title">Minha Toolbox</h2>
+        <div class="toolbox-grid">
+            <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" class="tool-icon-img" alt="Figma" />
+                <span>Figma</span>
+           
+            </div>
+            <div class="tool-item">
+    <img src="roblox-custom.png" class="tool-icon-img" alt="Roblox" />
+    <span>Roblox</span>
+    </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <section id="contact" class="contact-section reveal">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Para orçamentos de UI para Roblox ou sites básicos.</p>
+            <div class="links">
+                <a href="https://discord.gg/ppSRWtuMGg" class="contact-link">Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 hio_dev - UI Designer</p>
+    </footer>
+
+    <script>
+        // --- Lógica do Cursor ---
+        const dot = document.querySelector('.cursor-dot');
+        const outline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            dot.style.left = `${posX}px`;
+            dot.style.top = `${posY}px`;
+
+            outline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // Efeito de hover no cursor
+        const clickables = document.querySelectorAll('a, button, .project-card, .btn');
+        clickables.forEach((el) => {
+            el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+        });
+
+        // --- Lógica de Revelar ao Rolar (Scroll) ---
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
