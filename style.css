@@ -442,3 +442,64 @@ footer {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.5;
 }
+
+
+
+
+.nav-menu {
+    position: relative;
+    display: flex;
+    list-style: none;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 5px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+.nav-item {
+    padding: 10px 25px;
+    z-index: 2;
+}
+
+.nav-item a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-item.active a {
+    color: #fff;
+}
+
+/* Bolinha Branca Suave */
+.nav-indicator {
+    position: absolute;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+
+/* Scroll suave para quando clicar no menu */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Efeito de fade-in controlado pelo Intersection Observer */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
