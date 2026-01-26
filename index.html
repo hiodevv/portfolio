@@ -13,20 +13,19 @@
 
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
-
-    <header>
-        <nav class="container">
-            <div class="logo">HIO_DEV</div>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#projects">Portfólio</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
+<header>
+    <nav class="container nav-container">
+        <div class="logo">HIO_DEV</div>
+        <ul class="nav-menu">
+            <li class="nav-item active"><a href="#home">Início</a></li>
+            <li class="nav-item"><a href="#projects">Portfólio</a></li>
+            <li class="nav-item"><a href="#about">Sobre</a></li>
+            <li class="nav-item"><a href="#skills">Skills</a></li> 
+            <li class="nav-item"><a href="#contact">Contato</a></li>
+            
+        </ul>
+    </nav>
+</header>
 
     <section id="home" class="hero reveal">
     <div class="container">
@@ -122,19 +121,19 @@
     </div>
 </section>
 
-<section class="toolbox-section reveal">
-    <div class="toolbox-glow"></div> <div class="container">
-        <h2 class="toolbox-title">Minha Toolbox</h2>
+<section id="skills" class="toolbox-section reveal">
+    <div class="toolbox-glow"></div>
+    <div class="container">
+        <h2 class="toolbox-label">My Toolbox</h2>
         <div class="toolbox-grid">
             <div class="tool-item">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" class="tool-icon-img" alt="Figma" />
                 <span>Figma</span>
-           
             </div>
             <div class="tool-item">
-    <img src="roblox-custom.png" class="tool-icon-img" alt="Roblox" />
-    <span>Roblox</span>
-    </div>
+                <img src="roblox-custom.png" class="tool-icon-img" alt="Roblox" />
+                <span>Roblox</span>
+            </div>
         </div>
     </div>
 </section>
@@ -155,42 +154,7 @@
         <p>&copy; 2026 hio_dev - UI Designer</p>
     </footer>
 
-    <script>
-        // --- Lógica do Cursor ---
-        const dot = document.querySelector('.cursor-dot');
-        const outline = document.querySelector('.cursor-outline');
-
-        window.addEventListener('mousemove', (e) => {
-            const posX = e.clientX;
-            const posY = e.clientY;
-
-            dot.style.left = `${posX}px`;
-            dot.style.top = `${posY}px`;
-
-            outline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
-        });
-
-        // Efeito de hover no cursor
-        const clickables = document.querySelectorAll('a, button, .project-card, .btn');
-        clickables.forEach((el) => {
-            el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
-            el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
-        });
-
-        // --- Lógica de Revelar ao Rolar (Scroll) ---
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
