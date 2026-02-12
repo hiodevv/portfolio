@@ -55,4 +55,33 @@ navItems.forEach(item => {
         item.classList.add('active');
         moveIndicator(item);
     });
+
+});
+
+
+
+
+
+
+
+
+
+const langBtn = document.getElementById('lang-btn');
+const langIcon = document.getElementById('lang-icon');
+let currentLang = 'pt';
+
+langBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'pt' ? 'en' : 'pt';
+    
+    // Troca o emoji da bandeira
+    langIcon.innerText = currentLang === 'pt' ? '🇧🇷' : '🇺🇸';
+
+    // Tradução dos textos com data-pt e data-en
+    const textsToTranslate = document.querySelectorAll('[data-pt]');
+    textsToTranslate.forEach(el => {
+        el.innerText = el.getAttribute(`data-${currentLang}`);
+    });
+
+    // Animação de pulsação ao trocar
+    langBtn.style.borderColor = currentLang === 'pt' ? '#9DCD5A' : '#2D89C8';
 });
