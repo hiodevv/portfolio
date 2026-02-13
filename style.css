@@ -506,3 +506,23 @@ html {
     border-color: #2D89C8; 
     box-shadow: 0 0 20px rgba(45, 137, 200, 0.4);
 }
+
+
+
+
+
+
+body {
+    background-color: #050505; /* Fundo base preto */
+    /* Degradê inspirado no "Process & Tools" (Roxo e Rosa) */
+    background-image: 
+        radial-gradient(circle at 50% -20%, rgba(157, 100, 248, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(244, 50, 139, 0.08) 0%, transparent 40%),
+        /* Mantendo o Grid que você gosta */
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+    background-attachment: fixed; /* O fundo não mexe ao rolar o site */
+    color: #fff;
+    min-height: 100vh;
+}
